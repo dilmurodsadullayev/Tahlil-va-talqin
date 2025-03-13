@@ -1,0 +1,111 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+Asosiy - Tahlil va Talqin
+{% endblock title %}
+
+
+{% block content %}
+  <main class="main" style="margin-top: 50px; display: flex
+  ;
+      justify-content: center;
+      align-items: center;
+      height: 100vh">
+
+
+
+    <section id="about" class="about section">
+
+      <div class="container" data-aos="fade-up">
+        <div class="row gx-0">
+
+          <div class="col-lg-6 d-flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="content">
+              <h3>{{ last_article.user.username }}</h3>
+              <h2>{{ last_article.title | truncatewords:10}}</h2>
+              <p>
+               {{ last_article.body | truncatewords:30 }}
+              </p>
+              <div class="text-center text-lg-start">
+                <a href="#"
+                  class="btn-read-more d-inline-flex align-items-center justify-content-center align-self-center">
+                  <span>Read More</span>
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 d-flex align-items-center" data-aos="zoom-out" data-aos-delay="200">
+            {% if last_article.image %}
+            <img src="{{ last_article.image.url }}" class="img-fluid" alt="">
+            {% else %}
+            <img src="{% static 'img/test1.png' %}" class="img-fluid" alt="">
+            {% endif %}
+          </div>
+
+        </div>
+      </div>
+
+    </section><!-- /About Section -->
+    
+
+
+    <!-- Contact Section -->
+
+
+  </main>
+  <section id="clients" class="clients section bg-light py-5">
+
+    <!-- Section Title -->
+    <div class="container text-center section-title" data-aos="fade-up">
+      <h2 class="display-4 text-primary">JURNALLARI HAQIDA MA’LUMOT</h2>
+      <p class="lead text-secondary">TIL VA ADABIYOT TA’LIMI ILMIY-METODIK JURNALLARI HAQIDA MA’LUMOT</p>
+    </div><!-- End Section Title -->
+  
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+  
+      <div class="swiper init-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <p class="text-justify">
+              O‘zbekiston Respublikasi Xalq ta’limi vazirligi muassisligidagi «Til va adabiyot ta’limi» hamda «Преподавание языка и литературы» ilmiy-metodik jurnallari 1991-yilning yanvar oyidan chop etib kelinmoqda. Biroq jurnalning tarixi o‘tgan asrning 50-yillariga borib tutashadi: mazkur nashrlar 1958-yilda «Sovet maktabi» jurnalining rus tili bo‘limi asosida «Русский язык и литература в узбекской школе» nomi bilan tashkil etilgan. U 1991-yilgacha sobiq totalitar tuzum mavkurafiy ta’siri ostida o‘zbek o‘quvchilariga faqatgina rus tili va adabiyotini o‘rgatishga ixtisoslashgan nashr sifatida faqat rus tilida chop etilgan. O‘sha paytlarda jurnalning mushtariylariga taqdim etilish muntazamligi yiliga 6 ta (2 oyda bir) son bo‘lgan.
+
+              1991-yilda O‘zbekiston Respublikasi Xalq ta’limi vazirligining tashabbusi bilan yanvar oyidan tahririyatda dunyo tillari va jahon adabiyotining dolzarb mavzularini yoritishga ixtisoslashgan ikki nomdagi – «Til va adabiyot ta’limi» hamda «Преподавание языка и литературы» ilmiy-metodik jurnallari chop etila boshlandi.
+              
+              O‘sha davrda jurnallar tahririyatiga pedagogika fanlari doktori, professor Ra’no Tolipova bosh muharrirlik qilgan.
+              
+              2008-yildan boshlab «Til va adabiyot ta’limi» jurnalining nashr etilish muntazamligi har oyda bir marta, bir yilda 12 ta sonni tashkil etdi, «Преподавание языка и литературы» jurnali esa har bir yarim oyda bir marta, bir yilda 8 ta son nashr qilina boshlandi.
+              
+              O‘zbekiston Respublikasi Xalq ta’limi vazirligi muassisligidagi «Til va adabiyot ta’limi» – «Преподавание языка и литературы» ilmiy-metodik jurnallari mamlakatimiz uzluksiz ta’lim tizimining barcha bo‘g‘inlarida til va adabiyot fanlarini o‘qitish, amaliyot va nazariya o‘rtasidagi bog‘liqlikni ta’minlash hamda davlat tili va xorijiy tillarning o‘qitilishidagi muammo, ularning yechimlariga doir yangiliklarni amaliyotchi-pedagoglarga yetkazishga xizmat qilmoqda.
+              
+              Ushbu jurnal sahifalarida o‘qituvchilarning kasbiy mahoratini oshiruvchi materiallar berib borilishi bilan bir qatorda turli mintaqalarda faoliyat ko‘rsatuvchi mutaxassislarni birlashtiruvchi ko‘prik, ular uchun o‘z ilg‘or tajriba hamda ilmiy izlanishlarini ommalashtiruvchi minbar vazifasini ham bajarib kelmoqda. Shuningdek, «Til va adabiyot ta’limi» – «Преподавание языка и литературы» ilmiy-metodik jurnallarida katta ilmiy xodim-izlanuvchilar, doktorant, dunyo tillari va jahon adabiyotini o‘qitishga doir tadqiqot olib boruvchilarning ham fandagi yangi ilmiy kashfiyotlari, ilg‘or o‘qitish metodlariga doir izlanishlari muntazam berib boriladi. Mazkur jihat esa hududlardagi oddiy maktab o‘qituvchilarining o‘z darslarida darslikka qo‘shimcha ravishda yangi manbalarni o‘quvchilarga o‘z vaqtida yetkazishga xizmat qilayotir.
+              
+              Shu ma’noda jurnallarda quyidagi ruknlarda metodik va ilmiy maqolalar chop etiladi: «Dolzarb mavzu», «Tadqiqotlar», «Adabiy taqvim», «Dars – muqaddas», «Tahlil», «Ilg‘or tajriba maydoni», «Metodika», «Adabiyotshunoslik», «Ma’naviy qadriyatlarimiz», «Tilshunoslik», «Amaliy foydalanish uchun», «So‘ragan edingiz», «So‘z mulkiga sayohat», «Bilasizmi?», «Yangiliklar», «Nutq madaniyati», «Etimologiya» va boshqalar.
+              
+              Bugungi kunda tahririyat jamoasi zamonaviy talablardan kelib chiqqan holda nashrlarning mazmuni, ularning chop etilish sifatini muntazam takomillashtirish borasida izlanmoqda. Jumladan, 2012-yildan e’tiboran jurnal formati yangilandi, to‘rtta rangda, zamonaviy dizayn asosida berilishi ta’minlandi. Materiallarga qo‘yiladigan talab o‘qituvchilar fikrlariga muvofiqlashtirildi. Bunda, albatta, respublikamiz umumiy o‘rta, o‘rta maxsus, kasb-hunar hamda oliy ta’lim muassasalarida pedagogik faoliyati davomida ilmiy-metodik izlanishlar olib borayotgan yosh mutaxassislarning hissasi katta bo‘lmoqda.
+              
+              Shuningdek, O‘zbekiston Respublikasi Prezidentining «Chet tillarni o‘rganish tizimini yanada takomillashtirish chora-tadbirlari to‘g‘risida»gi Qarori ijrosi yuzasidan jurnallarning har ikkalasida ham:
+              
+              – ingliz tilini o‘qitish bo‘yicha «Les't Learn English» (Keling, ingliz tilini o‘rganamiz!) rukni orqali katta yoshli mustaqil o‘rganuvchilar uchun darslar tashkil etildi;
+              
+              – ta’lim tizimining barcha bo‘g‘inlarida ingliz tili darslari doirasida «Dars – muqaddas» ruknida pedagoglarga metodik yordam sifatida murakkab mavzular ilg‘or mutaxasislar tajribasi asosida berib borilmoqda;
+              
+              – jurnallarning «Tadqiqotlar» ruknidagi ilmiy materiallar uchun xalqaro standartlar asosida ingliz va rus tillarida annotatsiya berilishi yo‘lga qo‘yildi.
+              
+              Bu jihat O‘zbekiston Respublikasi Oliy attestatsiya komissiyasi Rayosat qarori bilan tasdiqlangan «Doktorlik dissertatsiyalarining asosiy ilmiy natijalari e’lon qilinishi lozim bo‘lgan respublika va xorijiy yetakchi ilmiy nashrlarni OAK ro‘yxatiga kiritish uchun talablar»ga mosligi bois 2013-yil sentabrdan «Til va adabiyot ta’limi» – «Преподавание языка и литературы» ilmiy-metodik jurnallari Doktorlik dissertatsiyalarining asosiy ilmiy natijalari e’lon qilinishi lozim bo‘lgan respublika va xorijiy yetakchi ilmiy nashrlarni Oliy attestatsiya komissiyasi ro‘yxatiga kiritildi. Bunda jurnallar Tahrir hay’ati tarkibi Oliy attestatsiya komissiyasi talablari asosida qayta ko‘rib chiqilib, unga yurtimizning taniqli olim va professorlari qo‘shildi. Bugungi kunda mazkur mutaxassislar jurnallarning mazmun mundarijasi hamda ilmiy salohiyatini yanada oshirish borasida amaliy taklif va bevosita ko‘mak berib kelmoqda.              </p>
+          </div>
+       
+          <!-- Add more swiper-slide blocks here if needed -->
+  
+        </div><!-- End swiper-wrapper -->
+  
+        <div class="swiper-pagination"></div>
+      </div><!-- End swiper -->
+  
+    </div><!-- End container -->
+  
+  </section><!-- End Clients Section -->
+
+  
+ {% endblock content %}

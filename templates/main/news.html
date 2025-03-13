@@ -1,0 +1,123 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% block title %}
+News
+{% endblock title %}
+
+{% block content %}
+
+ <!-- Include Swiper.js CSS -->
+
+ <section id="values" class="values section" style="margin-top: 50px;">
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2>E'lonlar</h2>
+        <p>So'ngi E'lonlardan Bohabar Bo'ring<br></p>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+        <!-- Cards -->
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="assets/img/values-1.png" class="img-fluid" alt="">
+                    <h3>Ad cupiditate sed est odio</h3>
+                    <p>Eum ad dolor et. Autem aut fugiat debitis voluptatem consequuntur sit.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="assets/img/values-2.png" class="img-fluid" alt="">
+                    <h3>Voluptatem voluptatum alias</h3>
+                    <p>Repudiandae amet nihil natus in distinctio suscipit id.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="assets/img/values-3.png" class="img-fluid" alt="">
+                    <h3>Fugit cupiditate alias nobis</h3>
+                    <p>Quam rem vitae est autem molestias explicabo debitis sint.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="assets/img/values-4.png" class="img-fluid" alt="">
+                    <h3>Exercitationem laboriosam</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="assets/img/values-5.png" class="img-fluid" alt="">
+                    <h3>Dolor sit amet</h3>
+                    <p>Autem aut fugiat debitis voluptatem consequuntur sit. Et veritatis id.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="assets/img/values-6.png" class="img-fluid" alt="">
+                    <h3>Accusantium doloremque</h3>
+                    <p>Fuga nam accusantium facilis eius delectus.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="assets/img/values-7.png" class="img-fluid" alt="">
+                    <h3>Eligendi voluptatem</h3>
+                    <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="assets/img/values-8.png" class="img-fluid" alt="">
+                    <h3>Vitae asperiores</h3>
+                    <p>Excepteur sint occaecat cupidatat non proident.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="assets/img/values-9.png" class="img-fluid" alt="">
+                    <h3>Doloremque laudantium</h3>
+                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="assets/img/values-10.png" class="img-fluid" alt="">
+                    <h3>Omnis iste natus</h3>
+                    <p>Accusantium doloremque laudantium, totam rem aperiam.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pagination -->
+  
+        <section aria-label="Page navigation" id="blog-pagination" class="blog-pagination section" style="margin-top: 50px;">
+
+            <div class="container">
+              <div class="d-flex justify-content-center">
+                <ul class="pagination">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                    </li>
+                  <li class="page-item" aria-current="page"><a class="page-link" href="#"><i class="bi bi-chevron-left"></i></a></li>
+                  <li class="page-item"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#" class="active">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item"><a class="page-link" href="#">4</a></li>
+                  <li>...</li>
+                  <li><a href="#">10</a></li>
+                  <li><a href="#"><i class="bi bi-chevron-right"></i></a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Next</a>
+                </li>
+                </ul>
+              </div>
+            </div>
+
+          </section><!-- /Blog Pagination Section -->
+
+    </div>
+</section>
+
+{% endblock content %}
