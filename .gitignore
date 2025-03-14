@@ -1,0 +1,38 @@
+# Django .gitignore file
+
+# Python
+*.pyc
+*.pyo
+__pycache__/
+
+# Virtual environment
+venv/
+.env
+
+# Django specific
+/db.sqlite3
+/media/
+/staticfiles/
+
+# Logs and debug
+*.log
+
+# Migrations
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# IDE specific
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Other
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pip-log.txt
+pip-delete-this-directory.txt
