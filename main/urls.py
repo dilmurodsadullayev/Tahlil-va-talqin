@@ -1,5 +1,9 @@
 from django.urls import path
 from . import views
+# from django.conf.urls import handler404
+#
+# handler404 = views.custom_404
+
 
 urlpatterns = [
     path('', views.index_view, name='home'),
@@ -11,4 +15,5 @@ urlpatterns = [
     path('news/', views.news_view, name='news'),
     path('contact/', views.contact_view, name='contact'),
     path('logout/',views.logout_view, name='logout'),
+    # path('404/',views.error_404, name='error'),
 ]

@@ -10,16 +10,13 @@ venv/
 .env
 
 # Django specific
-/db.sqlite3
-/media/
-/staticfiles/
+
 
 # Logs and debug
 *.log
 
 # Migrations
-**/migrations/*.py
-!**/migrations/__init__.py
+
 
 # IDE specific
 .idea/

@@ -3,3 +3,4 @@ Django==5.1.7
 pillow==11.1.0
 python-dotenv==1.0.1
 sqlparse==0.5.3
+whitenoise==6.9.0

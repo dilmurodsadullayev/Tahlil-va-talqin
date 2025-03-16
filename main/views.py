@@ -11,6 +11,8 @@ from django.contrib import messages
 
 def index_view(request):
     last_article = Article.objects.latest("id")
+    print(last_article.image.url)  # 'articles/html_language.jpg' chiqishi kerak
+    print(last_article.image.path)
 
     ctx = {
         "last_article": last_article
@@ -107,3 +109,7 @@ def logout_view(request):
     logout(request)
     messages.success(request, "Tizimdan chiqdingiz!")
     return redirect("home")
+
+
+def custom_404(request, exception):
+    return render(request, '404.html', status=404)
