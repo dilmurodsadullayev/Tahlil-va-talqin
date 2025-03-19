@@ -8,13 +8,13 @@ __pycache__/
 # Virtual environment
 venv/
 .env
+*.env
 
 # Django specific
 
 
 # Logs and debug
 *.log
-
 # Migrations
 
 

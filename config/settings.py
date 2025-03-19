@@ -16,6 +16,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
@@ -26,7 +27,7 @@ import os
 load_dotenv()
 
 SECRET_KEY = os.getenv("SECRET_KEY")
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -34,8 +35,8 @@ ALLOWED_HOSTS = ["*"]
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.staticfiles',  # Static files bo‘lishi shart!
-    'whitenoise.runserver_nostatic',  # WhiteNoise static fayllar uchun
+    # 'django.contrib.staticfiles',  # Static files bo‘lishi shart!
+    # 'whitenoise.runserver_nostatic',  # WhiteNoise static fayllar uchun
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -49,7 +50,7 @@ AUTH_USER_MODEL = 'main.CustomUser'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -133,7 +134,7 @@ STATICFILES_DIRS = [BASE_DIR / 'static']  # Statik fayllar katalogi
 STATIC_ROOT = BASE_DIR / 'staticfiles'  # `collectstatic` joyi
 
 # WhiteNoise uchun sozlamalar
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'

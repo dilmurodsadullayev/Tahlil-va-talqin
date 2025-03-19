@@ -10,16 +10,17 @@ from django.contrib import messages
 
 
 def index_view(request):
-    last_article = Article.objects.latest("id")
-    print(last_article.image.url)  # 'articles/html_language.jpg' chiqishi kerak
-    print(last_article.image.path)
+    try:
+        last_article = Article.objects.latest("id")
 
-    ctx = {
-        "last_article": last_article
+        ctx = {
+            "last_article": last_article
 
-    }
+        }
 
-    return render(request, "main/index.html", ctx)
+        return render(request, "main/index.html", ctx)
+    except:
+        return render(request, "main/index.html")
 
 
 

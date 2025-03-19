@@ -10,14 +10,19 @@ urlpatterns = [
     path('', include("main.urls"))
 ]
 
-# Faqat DEBUG=False bo‘lsa ham media fayllarni qo‘shish
+# # Faqat DEBUG=False bo‘lsa ham media fayllarni qo‘shish
+# if settings.DEBUG:
+#     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+# else:
+#     from django.views.static import serve
+#     from django.urls import re_path
+#
+#     urlpatterns += [
+#         re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),]
+#
+# handler404 = custom_404
+
+
 if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-else:
-    from django.views.static import serve
-    from django.urls import re_path
-
-    urlpatterns += [
-        re_path(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT}),]
-
-handler404 = custom_404
